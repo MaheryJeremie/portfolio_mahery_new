@@ -1,4 +1,4 @@
-﻿import React, { Suspense } from 'react';
+import React, { Suspense } from 'react';
 import { motion } from 'framer-motion';
 import { useLanguage } from '../contexts/LanguageContext';
 import HeroScene from './three/HeroScene';
