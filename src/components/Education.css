@@ -150,11 +150,33 @@
 }
 
 /* ── Responsive ── */
+
+/* Tablets (≤ 1024px) */
+@media (max-width: 1024px) {
+  .edu {
+    padding: clamp(4rem, 8vw, 7rem) clamp(1.25rem, 5vw, 3rem);
+  }
+  .edu__num { display: none; }
+}
+
+/* Tablets portrait + phones (≤ 768px) */
+@media (max-width: 768px) {
+  .edu__item {
+    grid-template-columns: 140px 40px 1fr;
+    gap: 0 1rem;
+  }
+  .edu__period {
+    font-size: 0.68rem;
+  }
+}
+
+/* Small phones (≤ 640px) — stack layout */
 @media (max-width: 640px) {
   .edu__item {
     grid-template-columns: 40px 1fr;
     grid-template-rows: auto auto;
     gap: 0 1rem;
+    padding: 1.75rem 0;
   }
 
   .edu__item-left {
@@ -172,5 +194,18 @@
   .edu__item-right {
     grid-column: 2;
     grid-row: 2;
+  }
+}
+
+/* Very small phones (≤ 380px) */
+@media (max-width: 380px) {
+  .edu {
+    padding: 3.5rem 1.25rem;
+  }
+  .edu__degree {
+    font-size: clamp(0.9rem, 4.5vw, 1.1rem);
+  }
+  .edu__desc {
+    font-size: 0.8rem;
   }
 }

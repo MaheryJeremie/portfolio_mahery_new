@@ -248,6 +248,94 @@
 }
 
 /* ── Responsive ── */
+
+/* Tablets (≤ 1024px) — réduire sidebar */
+@media (max-width: 1024px) {
+  .exp {
+    padding: clamp(4rem, 8vw, 7rem) clamp(1.25rem, 5vw, 3rem);
+  }
+  .exp__num { display: none; }
+  .exp__layout {
+    grid-template-columns: 220px 1fr;
+  }
+}
+
+/* Tablets portrait + phones (≤ 768px) — stack tabs au-dessus du panel */
+@media (max-width: 768px) {
+  .exp__layout {
+    grid-template-columns: 1fr;
+    border: none;
+    gap: 0;
+  }
+
+  .exp__tabs {
+    flex-direction: row;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    border-right: none;
+    border-bottom: 1px solid var(--border-mid);
+    flex-wrap: nowrap;
+  }
+  .exp__tabs::-webkit-scrollbar { display: none; }
+
+  .exp__tab {
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto auto;
+    flex-shrink: 0;
+    min-width: 140px;
+    border-bottom: none;
+    border-right: 1px solid var(--border);
+    padding: 1rem;
+  }
+
+  .exp__tab::before {
+    top: auto;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: auto;
+    height: 2px;
+    transform: scaleX(0);
+    transform-origin: left;
+  }
+  .exp__tab--active::before { transform: scaleX(1); }
+
+  .exp__tab-type { display: none; }
+
+  .exp__panel {
+    padding: 1.75rem 0;
+    border: 1px solid var(--border-mid);
+    border-top: none;
+    padding: 1.75rem 1.25rem;
+  }
+}
+
+/* Small phones (≤ 480px) */
+@media (max-width: 480px) {
+  .exp {
+    padding: 3.5rem 1.25rem;
+  }
+  .exp__tab {
+    min-width: 120px;
+    padding: 0.85rem;
+  }
+  .exp__tab-role {
+    font-size: 0.72rem;
+  }
+  .exp__tab-company {
+    font-size: 0.6rem;
+  }
+  .exp__panel {
+    padding: 1.25rem 0.75rem;
+  }
+  .exp__bullet {
+    font-size: 0.83rem;
+  }
+  .exp__badges {
+    gap: 0.35rem;
+  }
+}
 @media (max-width: 768px) {
   .exp__layout {
     grid-template-columns: 1fr;

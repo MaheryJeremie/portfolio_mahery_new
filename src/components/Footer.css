@@ -73,3 +73,46 @@
   color: rgba(240, 238, 230, 0.18);
   text-align: center;
 }
+
+/* ── Responsive ── */
+
+/* Tablets (≤ 768px) */
+@media (max-width: 768px) {
+  .footer {
+    padding: clamp(2rem, 5vw, 3.5rem) clamp(1.25rem, 5vw, 3rem);
+  }
+  .footer__inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.25rem;
+  }
+  .footer__right {
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+}
+
+/* Small phones (≤ 480px) */
+@media (max-width: 480px) {
+  .footer {
+    padding: 2rem 1.25rem;
+  }
+  .footer__inner {
+    align-items: center;
+    text-align: center;
+  }
+  .footer__left {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.6rem;
+  }
+  .footer__right {
+    justify-content: center;
+  }
+  .footer__sep {
+    display: none;
+  }
+  .footer__built {
+    font-size: 0.65rem;
+  }
+}

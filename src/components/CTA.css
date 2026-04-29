@@ -129,3 +129,65 @@
 .cta__email a:hover {
   color: var(--lime);
 }
+
+/* ── Responsive ── */
+
+/* Tablets (≤ 1024px) */
+@media (max-width: 1024px) {
+  .cta__orb--purple {
+    width: 350px; height: 350px;
+  }
+  .cta__orb--cyan {
+    width: 280px; height: 280px;
+  }
+}
+
+/* Phones (≤ 768px) */
+@media (max-width: 768px) {
+  .cta {
+    padding: clamp(4rem, 10vw, 8rem) clamp(1.25rem, 5vw, 3rem);
+  }
+  .cta__actions {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  .cta__btn {
+    width: 100%;
+    max-width: 320px;
+    justify-content: center;
+  }
+  .cta__orb--purple {
+    width: 250px; height: 250px;
+    left: -60px; top: -60px;
+  }
+  .cta__orb--cyan {
+    width: 200px; height: 200px;
+    right: -30px; bottom: -30px;
+  }
+}
+
+/* Small phones (≤ 480px) */
+@media (max-width: 480px) {
+  .cta {
+    padding: 3.5rem 1.25rem;
+  }
+  /* Title: clamp min réduit — "Construisons" déborde à 3rem sur 320px */
+  .cta__title {
+    font-size: clamp(1.8rem, 8vw, 2.8rem);
+    letter-spacing: -0.03em;
+    overflow-wrap: break-word;
+    word-break: break-word;
+  }
+  .cta__subtitle {
+    font-size: 0.88rem;
+  }
+  .cta__btn {
+    max-width: 100%;
+    font-size: 0.72rem;
+    padding: 0.9em 1.5em;
+  }
+  .cta__email {
+    font-size: 0.68rem;
+  }
+}

@@ -1,12 +1,23 @@
 .ldr {
   position: fixed;
-  inset: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  /* dvh = dynamic viewport height (exclut l'UI du navigateur mobile)
+     avec fallback svh puis vh pour les vieux navigateurs */
+  height: 100vh;
+  height: 100svh;
+  height: 100dvh;
   background: var(--void);
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   z-index: 9999;
   overflow: hidden;
+  box-sizing: border-box;
 }
 
 .ldr__grain {
@@ -21,6 +32,7 @@
   width: 100%;
   /* no max-width — let vw units handle sizing at all breakpoints */
   padding: 0 4vw;
+  box-sizing: border-box;
   position: relative;
   z-index: 1;
 }
@@ -100,7 +112,33 @@
 }
 
 /* ── Responsive ── */
-@media (max-width: 480px) {
+
+/* Extra-small phones (< 360px) */
+@media (max-width: 359px) {
+  .ldr__inner {
+    padding: 0 5vw;
+  }
+  .ldr__line {
+    font-size: clamp(1.6rem, 12.5vw, 2.8rem);
+    letter-spacing: -0.01em;
+  }
+  .ldr__name {
+    margin-bottom: clamp(1.25rem, 3vw, 2rem);
+  }
+  .ldr__label {
+    font-size: 0.42rem;
+    letter-spacing: 0.14em;
+  }
+  .ldr__count {
+    font-size: 0.52rem;
+  }
+}
+
+/* Small phones (360px – 480px) */
+@media (min-width: 360px) and (max-width: 480px) {
+  .ldr__inner {
+    padding: 0 5vw;
+  }
   .ldr__line {
     letter-spacing: -0.02em;
   }
@@ -113,8 +151,80 @@
   }
 }
 
+/* Phones landscape — limited vertical space */
+@media (orientation: landscape) and (max-height: 500px) {
+  .ldr__name {
+    margin-bottom: clamp(0.75rem, 2vh, 1.25rem);
+  }
+  .ldr__line {
+    font-size: clamp(1.25rem, 7vw, 3.5rem);
+    line-height: 0.92;
+  }
+  .ldr__foot {
+    margin-bottom: 0.4rem;
+  }
+}
+
+/* Tablets portrait & landscape (481px – 1024px) */
+@media (min-width: 481px) and (max-width: 1024px) {
+  .ldr__inner {
+    padding: 0 5vw;
+  }
+  .ldr__label {
+    font-size: 0.58rem;
+    letter-spacing: 0.28em;
+  }
+  .ldr__count {
+    font-size: 0.72rem;
+  }
+  .ldr__bar {
+    height: 1.5px;
+  }
+}
+
+/* Large desktops (1200px – 1919px) */
 @media (min-width: 1200px) {
   .ldr__line {
     letter-spacing: -0.05em;
+  }
+  .ldr__label {
+    font-size: 0.62rem;
+    letter-spacing: 0.34em;
+  }
+  .ldr__count {
+    font-size: 0.78rem;
+  }
+  .ldr__bar {
+    height: 2px;
+  }
+}
+
+/* Ultra-wide (1920px+) */
+@media (min-width: 1920px) {
+  .ldr__inner {
+    padding: 0 3vw;
+  }
+  .ldr__label {
+    font-size: 0.72rem;
+    letter-spacing: 0.38em;
+  }
+  .ldr__count {
+    font-size: 0.9rem;
+  }
+  .ldr__bar {
+    height: 2px;
+  }
+}
+
+/* 4K / very large displays (2560px+) */
+@media (min-width: 2560px) {
+  .ldr__inner {
+    padding: 0 2.5vw;
+  }
+  .ldr__label {
+    font-size: 0.85rem;
+  }
+  .ldr__count {
+    font-size: 1rem;
   }
 }

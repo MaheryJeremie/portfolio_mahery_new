@@ -208,6 +208,50 @@
 }
 
 /* Responsive */
-@media (max-width: 900px) {
-  .about__inner { grid-template-columns: 1fr; }
+
+/* Tablets (≤ 1024px) — stack columns */
+@media (max-width: 1024px) {
+  .about__inner {
+    grid-template-columns: 1fr;
+    gap: clamp(2rem, 4vw, 3.5rem);
+  }
+  .about__num {
+    display: none;
+  }
+}
+
+/* Tablets portrait (≤ 768px) */
+@media (max-width: 768px) {
+  .about {
+    padding: clamp(4rem, 8vw, 7rem) clamp(1.25rem, 5vw, 3rem);
+  }
+  .about__meta-row {
+    grid-template-columns: 4rem 1fr;
+  }
+  .about__stats {
+    gap: 1.25rem;
+  }
+}
+
+/* Small phones (≤ 480px) */
+@media (max-width: 480px) {
+  .about {
+    padding: 3.5rem 1.25rem;
+  }
+  .about__meta-row {
+    grid-template-columns: 1fr;
+    gap: 0.2rem;
+  }
+  .about__meta-k {
+    font-size: 0.55rem;
+  }
+  .about__stats {
+    gap: 1rem;
+  }
+  .about__chips {
+    gap: 0.4rem;
+  }
+  .about__langs-row {
+    grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+  }
 }
