@@ -1,10 +1,11 @@
 import { useState, useEffect, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence, useReducedMotion } from 'framer-motion';
 import { useLanguage } from '../contexts/LanguageContext';
 import './Loader.css';
 
 export default function Loader({ onComplete }) {
   const { t } = useLanguage();
+  const reduceMotion = useReducedMotion();
   const [count, setCount] = useState(0);
   const [exiting, setExiting] = useState(false);
 
@@ -56,9 +57,9 @@ export default function Loader({ onComplete }) {
               <div className="ldr__overflow">
                 <motion.span
                   className="ldr__line"
-                  initial={{ y: '105%' }}
+                  initial={{ y: reduceMotion ? 0 : '105%' }}
                   animate={{ y: 0 }}
-                  transition={{ delay: 0.12, duration: 0.75, ease: [0.16, 1, 0.3, 1] }}
+                  transition={{ delay: reduceMotion ? 0 : 0.12, duration: 0.75, ease: [0.16, 1, 0.3, 1] }}
                 >
                   MAHERY
                 </motion.span>
@@ -66,9 +67,9 @@ export default function Loader({ onComplete }) {
               <div className="ldr__overflow">
                 <motion.span
                   className="ldr__line ldr__line--lime"
-                  initial={{ y: '105%' }}
+                  initial={{ y: reduceMotion ? 0 : '105%' }}
                   animate={{ y: 0 }}
-                  transition={{ delay: 0.24, duration: 0.75, ease: [0.16, 1, 0.3, 1] }}
+                  transition={{ delay: reduceMotion ? 0 : 0.22, duration: 0.75, ease: [0.16, 1, 0.3, 1] }}
                 >
                   RAMAHAY
                 </motion.span>
