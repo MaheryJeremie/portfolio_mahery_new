@@ -115,10 +115,6 @@ body {
   line-height: 1.6;
 }
 
-@media (hover: hover) and (pointer: fine) {
-  body { cursor: none; }
-}
-
 button { border: none; background: none; font-family: inherit; }
 a      { color: inherit; text-decoration: none; }
 

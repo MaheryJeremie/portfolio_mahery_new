@@ -4,7 +4,6 @@ import { LanguageProvider, useLanguage } from './contexts/LanguageContext';
 import { ThemeProvider } from './contexts/ThemeContext';
 import Analytics from './components/Analytics';
 import LanguageSelect from './components/LanguageSelect';
-import Cursor from './components/Cursor';
 import Loader from './components/Loader';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
@@ -71,7 +70,6 @@ function App() {
   return (
     <ThemeProvider>
       <LanguageProvider>
-        <Cursor />
         <Portfolio />
       </LanguageProvider>
     </ThemeProvider>
