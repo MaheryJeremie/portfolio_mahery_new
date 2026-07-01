@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-const PROFILE_JPG = `${process.env.PUBLIC_URL}/images/profile.jpg`;
+const PROFILE_JPG = `${process.env.PUBLIC_URL}/images/profile.png`;
 const PROFILE_WEBP = `${process.env.PUBLIC_URL}/images/profile.webp`;
 const PLACEHOLDER = `${process.env.PUBLIC_URL}/images/profile-placeholder.svg`;
 

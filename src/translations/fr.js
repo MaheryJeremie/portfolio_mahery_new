@@ -18,7 +18,7 @@ export const fr = {
     themeDark: 'Mode sombre',
   },
   hero: {
-    eyebrow: 'Développeur Junior · {year}',
+    eyebrow: 'Développeur FULL-STACK',
     available: 'Disponible',
     name1: 'Mahery',
     name2: 'Ramahay',
