@@ -36,19 +36,6 @@ export default function Hero() {
       </div>
       <div className="hero__glow" aria-hidden="true" />
 
-      <div
-        className="hero__photo"
-        aria-hidden="true"
-        style={{ transform: `translateY(${photoShift}px)` }}
-      >
-        <ProfileImage
-          className="hero__photo-img"
-          alt=""
-          loading="eager"
-        />
-        <div className="hero__photo-scrim" />
-      </div>
-
       <div className="hero__body">
         <div className="hero__content">
           <div className="hero__name-block">
@@ -76,6 +63,18 @@ export default function Hero() {
                   <span className="hero__avail-dot" />
                   <span>{t.hero.available}</span>
                 </div>
+              </div>
+
+              <div
+                className="hero__photo"
+                style={{ transform: `translateY(${photoShift}px)` }}
+              >
+                <ProfileImage
+                  className="hero__photo-img"
+                  alt={t.hero.photoAlt}
+                  loading="eager"
+                />
+                <div className="hero__photo-scrim" aria-hidden="true" />
               </div>
 
               <p className="hero__desc">{t.hero.description}</p>
