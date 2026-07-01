@@ -3,7 +3,7 @@
   "name": "Mahery Ramahay — Portfolio",
   "icons": [
     {
-      "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'%3E%3Crect width='192' height='192' fill='%237AB800'/%3E%3Ctext x='96' y='120' font-family='Arial,sans-serif' font-size='72' font-weight='bold' fill='%230C0C14' text-anchor='middle'%3EMR%3C/text%3E%3C/svg%3E",
+      "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'%3E%3Crect width='192' height='192' fill='%23DFFF00'/%3E%3Ctext x='96' y='120' font-family='Arial,sans-serif' font-size='72' font-weight='bold' fill='%230D0D0D' text-anchor='middle'%3EMR%3C/text%3E%3C/svg%3E",
       "sizes": "192x192",
       "type": "image/svg+xml"
     }

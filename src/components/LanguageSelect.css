@@ -40,7 +40,7 @@
 .ls__panel-fill {
   position: absolute;
   inset: 0;
-  background: var(--lime);
+  background: var(--lime-btn);
   transform: translateY(101%);
   transition: transform 0.6s var(--ease-expo);
   z-index: 0;

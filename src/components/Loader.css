@@ -97,7 +97,7 @@
 
 .ldr__fill {
   height: 100%;
-  background: linear-gradient(90deg, var(--lime), #89D437);
+  background: var(--lime);
 }
 
 /* ── Mobile ── */

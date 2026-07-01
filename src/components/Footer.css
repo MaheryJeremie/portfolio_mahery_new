@@ -27,7 +27,7 @@
   font-weight: 800;
   letter-spacing: 0.08em;
   color: var(--on-lime);
-  background: var(--lime);
+  background: var(--lime-btn);
   padding: 0.2em 0.5em;
   line-height: 1.4;
 }

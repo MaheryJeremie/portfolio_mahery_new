@@ -103,7 +103,7 @@
   font-weight: 700;
   letter-spacing: 0.12em;
   color: var(--on-lime);
-  background: var(--lime);
+  background: var(--lime-btn);
   padding: 0.3em 0.65em;
 }
 

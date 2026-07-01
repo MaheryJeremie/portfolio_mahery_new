@@ -23,7 +23,7 @@
   background: radial-gradient(ellipse 60% 70% at 70% 50%, var(--lime-dim) 0%, transparent 70%);
   pointer-events: none;
   z-index: 1;
-  opacity: 0.65;
+  opacity: 0.28;
 }
 
 .hero__body {
@@ -83,10 +83,10 @@
   left: -8px;
   right: 12%;
   top: 12%;
-  border: 2px solid var(--lime);
+  border: 2px solid var(--lime-btn);
   border-radius: var(--radius-md);
   z-index: -1;
-  opacity: 0.85;
+  opacity: 0.55;
 }
 
 @media (min-width: 900px) {
@@ -155,7 +155,8 @@
 .hero__avail-dot {
   width: 7px; height: 7px;
   border-radius: 50%;
-  background: var(--lime);
+  background: var(--lime-btn);
+  box-shadow: 0 0 0 3px rgba(188, 212, 42, 0.22);
   animation: pulse-dot 2s infinite;
 }
 
@@ -230,9 +231,9 @@
 }
 
 .hero__btn--primary {
-  background: var(--lime);
+  background: var(--lime-btn);
   color: var(--on-lime);
-  box-shadow: 0 4px 20px var(--lime-glow);
+  box-shadow: 0 4px 20px var(--lime-glow), inset 0 1px 0 rgba(255, 255, 255, 0.25);
 }
 
 .hero__btn--primary:hover,
@@ -292,8 +293,8 @@
 
 .hero__marquee-sep {
   margin: 0 1.5rem;
-  color: var(--lime);
-  opacity: 0.7;
+  color: var(--lime-btn);
+  opacity: 0.45;
 }
 
 .hero__scroll {
@@ -310,7 +311,7 @@
 .hero__scroll-line {
   width: 2px;
   height: 3rem;
-  background: linear-gradient(to bottom, var(--lime), transparent);
+  background: linear-gradient(to bottom, var(--lime-btn), transparent);
   animation: scroll-drop 2s ease infinite;
   border-radius: 1px;
 }

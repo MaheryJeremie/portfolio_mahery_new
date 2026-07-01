@@ -77,12 +77,12 @@
   font-weight: 700;
   letter-spacing: 0.1em;
   color: var(--on-lime);
-  background: var(--lime);
+  background: var(--lime-btn);
   padding: 0.95em 2em;
   min-height: 44px;
   align-self: flex-start;
   transition: background 0.25s, transform 0.2s;
-  box-shadow: 0 4px 16px var(--lime-glow);
+  box-shadow: 0 4px 16px var(--lime-glow), inset 0 1px 0 rgba(255, 255, 255, 0.25);
 }
 
 .contact-form__submit:hover:not(:disabled) {

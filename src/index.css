@@ -1,71 +1,73 @@
 @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap');
 
-/* ── Design Tokens — Light refined 2026 ── */
+/* ── Design Tokens — Neon Shock ── */
 :root,
 [data-theme="light"] {
   --void:          #F9F8F5;
-  --ink:           #16161F;
+  --ink:           #0A0A0A;
   --surface:       #FFFFFF;
   --card:          #FFFFFF;
   --card-hover:    #F3F2EE;
 
-  --lime:          #5E9E2E;
-  --lime-bright:   #72B83A;
-  --lime-dim:      rgba(94, 158, 46, 0.10);
-  --lime-glow:     rgba(94, 158, 46, 0.16);
-  --violet:        #5C4DA8;
-  --violet-dim:    rgba(92, 77, 168, 0.07);
-  --amber:         #D4920A;
+  --lime:          #5F7400;
+  --lime-btn:      #BCD42A;
+  --lime-bright:   #CAE23A;
+  --lime-dim:      rgba(95, 116, 0, 0.09);
+  --lime-glow:     rgba(188, 212, 42, 0.26);
+  --violet:        #9E9E9E;
+  --violet-dim:    rgba(80, 75, 65, 0.04);
+  --amber:         #757575;
 
-  --white:         #16161F;
-  --muted:         rgba(22, 22, 31, 0.64);
-  --dim:           rgba(22, 22, 31, 0.44);
-  --faint:         rgba(22, 22, 31, 0.045);
+  --white:         #000000;
+  --muted:         rgba(0, 0, 0, 0.52);
+  --dim:           rgba(0, 0, 0, 0.36);
+  --faint:         rgba(0, 0, 0, 0.04);
 
-  --border:        rgba(22, 22, 31, 0.07);
-  --border-mid:    rgba(22, 22, 31, 0.11);
-  --border-bright: rgba(22, 22, 31, 0.18);
+  --border:        rgba(0, 0, 0, 0.08);
+  --border-mid:    rgba(0, 0, 0, 0.11);
+  --border-bright: rgba(0, 0, 0, 0.16);
 
-  --on-lime:       #FFFFFF;
-  --text-inverse:  #F9F8F5;
+  --on-lime:       #000000;
+  --text-inverse:  #FFFFFF;
 
-  --shadow-sm:     0 1px 2px rgba(22, 22, 31, 0.04), 0 4px 12px rgba(22, 22, 31, 0.04);
-  --shadow-md:     0 4px 24px rgba(22, 22, 31, 0.07);
-  --shadow-lg:     0 16px 48px rgba(22, 22, 31, 0.09);
-  --shadow-photo:  0 20px 50px rgba(22, 22, 31, 0.12), 0 0 0 1px var(--border);
+  --shadow-sm:     0 1px 2px rgba(0, 0, 0, 0.04), 0 2px 8px rgba(0, 0, 0, 0.03);
+  --shadow-md:     0 4px 16px rgba(0, 0, 0, 0.06);
+  --shadow-lg:     0 12px 32px rgba(0, 0, 0, 0.08);
+  --shadow-photo:  0 16px 40px rgba(0, 0, 0, 0.10), 0 0 0 1px var(--border);
 }
 
 [data-theme="dark"] {
-  --void:          #12121A;
-  --ink:           #F0EFE9;
-  --surface:       #1A1A24;
-  --card:          #1E1E2A;
-  --card-hover:    #242432;
+  --void:          #1A1A1B;
+  --ink:           #FFFFFF;
+  --surface:       #222222;
+  --card:          #000000;
+  --card-hover:    #141414;
 
-  --lime:          #72B83A;
-  --lime-bright:   #8AD04A;
-  --lime-dim:      rgba(114, 184, 58, 0.12);
-  --lime-glow:     rgba(114, 184, 58, 0.18);
-  --violet:        #8B7FD4;
-  --violet-dim:    rgba(139, 127, 212, 0.10);
-  --amber:         #F0B429;
+  --lime:          #DFFF00;
+  --lime-btn:      #DFFF00;
+  --lime-bright:   #EFFF4D;
+  --lime-dim:      rgba(223, 255, 0, 0.08);
+  --lime-glow:     rgba(223, 255, 0, 0.20);
+  --violet:        #555555;
+  --violet-dim:    rgba(85, 85, 85, 0.18);
+  --amber:         #999999;
 
-  --white:         #F0EFE9;
-  --muted:         rgba(240, 239, 233, 0.62);
-  --dim:           rgba(240, 239, 233, 0.42);
-  --faint:         rgba(240, 239, 233, 0.05);
+  --white:         #FFFFFF;
+  --muted:         rgba(255, 255, 255, 0.58);
+  --dim:           rgba(255, 255, 255, 0.36);
+  --faint:         rgba(255, 255, 255, 0.05);
 
-  --border:        rgba(240, 239, 233, 0.08);
-  --border-mid:    rgba(240, 239, 233, 0.12);
-  --border-bright: rgba(240, 239, 233, 0.2);
+  --border:        rgba(255, 255, 255, 0.09);
+  --border-mid:    rgba(255, 255, 255, 0.13);
+  --border-bright: rgba(255, 255, 255, 0.22);
 
-  --on-lime:       #12121A;
-  --text-inverse:  #12121A;
+  --on-lime:       #000000;
+  --text-inverse:  #000000;
 
-  --shadow-sm:     0 1px 2px rgba(0, 0, 0, 0.2), 0 4px 12px rgba(0, 0, 0, 0.15);
-  --shadow-md:     0 4px 24px rgba(0, 0, 0, 0.25);
-  --shadow-lg:     0 16px 48px rgba(0, 0, 0, 0.35);
-  --shadow-photo:  0 20px 50px rgba(0, 0, 0, 0.35), 0 0 0 1px var(--border);
+  --shadow-sm:     0 1px 3px rgba(0, 0, 0, 0.35), 0 4px 12px rgba(0, 0, 0, 0.25);
+  --shadow-md:     0 4px 24px rgba(0, 0, 0, 0.40);
+  --shadow-lg:     0 16px 48px rgba(0, 0, 0, 0.50);
+  --shadow-photo:  0 20px 50px rgba(0, 0, 0, 0.55), 0 0 0 1px var(--border);
 }
 
 :root {
@@ -106,8 +108,8 @@ body {
   font-family: var(--font-body);
   background: var(--void);
   background-image:
-    radial-gradient(ellipse 70% 45% at 50% -5%, var(--violet-dim), transparent),
-    radial-gradient(ellipse 50% 35% at 95% 40%, var(--lime-dim), transparent);
+    radial-gradient(ellipse 60% 40% at 50% -5%, var(--violet-dim), transparent),
+    radial-gradient(ellipse 35% 25% at 95% 40%, var(--lime-dim), transparent);
   color: var(--ink);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -146,7 +148,7 @@ a      { color: inherit; text-decoration: none; }
 
 ::-webkit-scrollbar       { width: 3px; }
 ::-webkit-scrollbar-track { background: var(--void); }
-::-webkit-scrollbar-thumb { background: rgba(94, 158, 46, 0.3); }
+::-webkit-scrollbar-thumb { background: var(--lime-dim); }
 ::-webkit-scrollbar-thumb:hover { background: var(--lime); }
 
 ::selection { background: var(--lime-dim); color: var(--ink); }
