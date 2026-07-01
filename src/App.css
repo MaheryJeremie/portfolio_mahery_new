@@ -1,12 +1,4 @@
 .portfolio {
   min-height: 100vh;
   background: var(--void);
-  opacity: 0;
-  transform: translateY(16px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
-}
-
-.portfolio--ready {
-  opacity: 1;
-  transform: translateY(0);
 }

@@ -1,9 +1,6 @@
 export const en = {
   lang: 'en',
   skipLink: 'Skip to content',
-  loader: {
-    initializing: 'Initializing',
-  },
   common: {
     github: 'GitHub ↗',
     live: 'Live ↗',

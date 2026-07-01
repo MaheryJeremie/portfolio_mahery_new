@@ -1,10 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './App.css';
 import { LanguageProvider, useLanguage } from './contexts/LanguageContext';
 import { ThemeProvider } from './contexts/ThemeContext';
 import Analytics from './components/Analytics';
 import LanguageSelect from './components/LanguageSelect';
-import Loader from './components/Loader';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -16,13 +15,8 @@ import Process from './components/Process';
 import CTA from './components/CTA';
 import Footer from './components/Footer';
 
-const LOADER_KEY = 'portfolio-loaded';
-
 function Portfolio() {
   const { language, selectLanguage, t } = useLanguage();
-  const [loaded, setLoaded] = useState(
-    () => sessionStorage.getItem(LOADER_KEY) === '1'
-  );
 
   const handleDownloadCV = () => {
     const filename = language === 'fr' ? 'CV_Mahery_FR.pdf' : 'CV_Mahery_EN.pdf';
@@ -30,11 +24,6 @@ function Portfolio() {
     link.href = `${process.env.PUBLIC_URL}/${filename}`;
     link.download = filename;
     link.click();
-  };
-
-  const handleLoaderComplete = () => {
-    sessionStorage.setItem(LOADER_KEY, '1');
-    setLoaded(true);
   };
 
   if (!language) {
@@ -47,8 +36,7 @@ function Portfolio() {
       <a href="#main-content" className="skip-link">
         {t.skipLink}
       </a>
-      {!loaded && <Loader onComplete={handleLoaderComplete} />}
-      <div className={`portfolio${loaded ? ' portfolio--ready' : ''}`}>
+      <div className="portfolio">
         <Navbar onDownloadCV={handleDownloadCV} />
         <main id="main-content">
           <Hero />
